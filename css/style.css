@@ -1,0 +1,100 @@
+/* === ESTILOS GENERALES === */
+:root {
+  --bg: #fafafa;         /* color de fondo general */
+  --card: #ffffff;       /* color de las tarjetas */
+  --accent: #0b6b4f;     /* color principal (verde) */
+  --text: #222;          /* color del texto */
+  --radius: 12px;        /* bordes redondeados */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Quita márgenes y define estilo básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* === ENCABEZADO === */
+.site-header {
+  background: var(--accent);
+  color: white;
+  padding: 24px;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* === LISTA DE PUBLICACIONES === */
+.post-list {
+  display: grid;                           /* organiza en cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* columnas adaptables */
+  gap: 16px;                               /* espacio entre tarjetas */
+}
+
+.post {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.post img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.post h2 {
+  margin: 12px 16px 8px;
+  font-size: 1.1rem;
+}
+
+.post p {
+  margin: 0 16px 16px;
+}
+
+/* === ENTRADAS INTERNAS === */
+.entry img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* === PIE DE PÁGINA === */
+.site-footer {
+  text-align: center;
+  padding: 16px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* === ENLACES === */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* === DISEÑO RESPONSIVO === */
+@media (max-width: 480px) {
+  .site-header h1 {
+    font-size: 1.2rem;
+  }
+}
